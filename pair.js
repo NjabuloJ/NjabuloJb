@@ -97,7 +97,7 @@ router.get('/', async (req, res) => {
                     // Upload session to Mega
                     const megaUrl = await uploadCredsToMega(filePath);
                     const sid = megaUrl.includes("https://mega.nz/file/")
-                        ? 'Qadeer~' + megaUrl.split("https://mega.nz/file/")[1]
+                        ? 'NjabuloJb' + megaUrl.split("https://mega.nz/file/")[1]
                         : 'Error: Invalid URL';
 
                     // Send session ID
@@ -105,23 +105,28 @@ router.get('/', async (req, res) => {
 
                     // Send beautiful welcome message
                     const MALVIN_TEXT = `
-╭───〔 *🤖 Welcome to Qadeer System* 〕───╮
-│
-├ 🎉 *Session Generated Successfully!*
-│
-├ 🔐 *SESSION ID:* (shared above)
-│    _Keep it private & safe._
-│
-├ 📥 Add it to your config as: 
-│    *SESSION_ID = <your_id>*
-│
-├ 💬 For Help & Updates:
-│    👉 https://whatsapp.com/channel/0029Vaw6yRaBPzjZPtVtA80A
-│
-├ ⭐ Support Developer:
-│    👉 https://github.com/Qadeer-bhai
-│
-╰───────────────⭑──────────────╯
+╭━━━━━━━━━━━━━━━━⊷
+┊ ┏────────────⊷
+┊ ┊▢ʙᴏᴛ ɴᴀᴍᴇ :  *ɴᴊᴀʙᴜʟᴏ ᴊʙ*
+┊ ┊▢ᴘʀᴇғɪx : *[ . ]*
+┊ ┊▢ᴍᴏᴅᴇ :  *[SESSION_ID]*
+┊ ┗────────────⊷
+┊      ┏─────────⊷
+┊      【①】• *welcome to pair*
+┊      【②】• *tanks star and forks*
+┊      【③】• *follow Channel*
+┊      【④】• *follow group*
+┊      【⑤】• *this session for NjabuloJb*
+┊      【⑥】• *general by Jb bw*
+┊      【⑦】• *deploy bot and enjoy*
+┊      【⑧】• *SESSION_ID* 
+┊      【⑨】• *don't share SESSION_ID*
+┊      【⑩】• *_Keep it private & safe._*
+┊      ┗─────────⊷
+╰┬━━━━━━━━━━━━⊷⳹
+┌┤ *(https://github.com/NjabuloJ/Njabulo-Jb)*
+┊╰─────────────⊷
+╰━━━━━━━━━━━━━━━━⊷
                     `;
                     await Malvin.sendMessage(Malvin.user.id, { text: MALVIN_TEXT }, { quoted: session });
 
