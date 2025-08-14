@@ -14,6 +14,6 @@
 
 # `Owner`
 
- <a href="https://files.catbox.moe/bw9rme.jpg"><img src="https://github.com/Qadeer-bhai.png" width="250" height="250" alt="Qadeer Khan"/></a>
+ <a href="https://files.catbox.moe/bw9rme.jpg"><img src="https://files.catbox.moe/bw9rme.jpg" width="250" height="250" alt="Qadeer Khan"/></a>
 
    
