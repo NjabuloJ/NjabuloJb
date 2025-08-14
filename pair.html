@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content=" PAIR CODE">
+  <meta property="og:description" content="Pair-code linker for WhatsApp bot.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Qadeer-bhai/QADEER-XTECH">
+  <meta property="og:image" content="https://qu.ax/FUjBe.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content=" PAIR CODE">
+  <meta name="twitter:description" content="Pair-code linker for  WhatsApp bot.">
+  <meta name="twitter:image" content="https://qu.ax/FUjBe.jpg">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background: #e9e9e9;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+    
+    p {
+      color: #555;
+    }
+
+    .input-container {
+      display: flex;
+      background: #f5f5f5;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      padding: 0.3rem;
+      gap: 0.3rem;
+      max-width: 300px;
+      width: 100%;
+      margin: 20px auto;
+    }
+
+    .input-container input {
+      border-radius: 4px 0 0 4px;
+      background: #f5f5f5;
+      width: 100%;
+      flex-basis: 75%;
+      padding: 1rem;
+      border: none;
+      color: #333;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .input-container input:focus {
+      outline: none;
+      background: #fff;
+    }
+
+    .input-container button {
+      flex-basis: 25%;
+      padding: 1rem;
+      background: #555555;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: white;
+      border: none;
+      width: 100%;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .input-container button:hover {
+      background: #333333;
+    }
+
+    #loading-spinner {
+      display: none;
+      color: #555555;
+      margin-top: 10px;
+      font-size: 24px;
+    }
+
+    .fa-spinner {
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #f5f5f5;
+      color: #555;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="snowflake" style="display:none;"></div>
+  <div class="container">
+    <h3>SESSION GENERATOR</h3>
+    <br>
+    <h3>𝐑𝐞𝐠𝐚𝐫𝐝𝐬 Qadeer Khan</h3>
+    <p>Enter your WhatsApp Number with Country Code.</p>
+    <br>
+    <div class="input-container">
+      <input placeholder="923xxxxxx" type="number" id="number" name="">
+      <button id="submit">Get</button>
+    </div>
+    <div id="loading-spinner">
+      <i class="fas fa-spinner fa-spin"></i>
+    </div>
+    <br>
+    <main id="pair"></main>
+  </div>
+  <footer>
+    QADEER KHAN &copy <span id="currentYear"></span>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+  <script>
+    // JAVASCRIPT IS UNCHANGED
+    let a = document.getElementById("pair");
+    let b = document.getElementById("submit");
+    let c = document.getElementById("number");
+    async function Copy() {
+      let text = document.getElementById("copy").innerText;
+      let obj = document.getElementById("copy");
+      await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
+      obj.innerText = "✔️ COPIED";
+      obj.style = "color:green;font-weight:bold";
+      obj.size = "5";
+      setTimeout(() => {
+        obj.innerText = text;
+        obj.style = "color:black;font-weight-bold";
+        obj.size = "5";
+      }, 500);
+    }
+    b.addEventListener("click", async (e) => {
+      e.preventDefault();
+      if (!c.value) {
+        a.innerHTML = '<a style="color:red;font-weight:bold">❗ Enter your WhatsApp number with country code.</a><br><br>';
+      } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
+        a.innerHTML = '<a style="color:red;font-weight:bold">❗ Invalid number format. Please try again.</a><br><br>';
+      } else {
+        const bc = c.value.replace(/[^0-9]/g, "");
+        document.getElementById("loading-spinner").style.display = "block";
+        a.innerHTML = '';
+        let { data } = await axios(`/code?number=${bc}`);
+        let code = data.code || "❗ Service Unavailable";
+        a.innerHTML = '<font id="copy" onclick="Copy()" style="color:black;font-weight:bold" size="5">CODE: <span style="color:#2c3e50;font-weight:bold">' + code + '</span></font><br><br><br>';
+        document.getElementById("loading-spinner").style.display = "none";
+      }
+    });
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
