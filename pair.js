@@ -97,7 +97,7 @@ router.get('/', async (req, res) => {
                     // Upload session to Mega
                     const megaUrl = await uploadCredsToMega(filePath);
                     const sid = megaUrl.includes("https://mega.nz/file/")
-                        ? 'NjabuloJb' + megaUrl.split("https://mega.nz/file/")[1]
+                        ? 'NjabuloJb~' + megaUrl.split("https://mega.nz/file/")[1]
                         : 'Error: Invalid URL';
 
                     // Send session ID
@@ -112,16 +112,16 @@ router.get('/', async (req, res) => {
 ┊ ┊▢ᴍᴏᴅᴇ :  *[SESSION_ID]*
 ┊ ┗────────────⊷
 ┊      ┏─────────⊷
-┊      【①】• *welcome to pair*
-┊      【②】• *tanks star and forks*
-┊      【③】• *follow Channel*
-┊      【④】• *follow group*
-┊      【⑤】• *this session for NjabuloJb*
-┊      【⑥】• *general by Jb bw*
-┊      【⑦】• *deploy bot and enjoy*
-┊      【⑧】• *SESSION_ID* 
-┊      【⑨】• *don't share SESSION_ID*
-┊      【⑩】• *_Keep it private & safe._*
+┊ 【①】• *ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴘᴀɪʀ*
+┊ 【②】• *ᴛᴀɴᴋs sᴛᴀʀ ᴀɴᴅ ғᴏʀᴋs*
+┊ 【③】• *ғᴏʟʟᴏᴡ ᴄʜᴀɴɴᴇʟ*
+┊ 【④】• *ғᴏʟʟᴏᴡ ɢʀᴏᴜᴘ*
+┊ 【⑤】• *ᴛʜɪs sᴇssɪᴏɴ ғᴏʀ ɴᴊᴀʙᴜʟᴏᴊʙ*
+┊ 【⑥】• *ɢᴇɴᴇʀᴀʟ ʙʏ ᴊʙ ʙᴡ*
+┊ 【⑦】• *ᴅᴇᴘʟᴏʏ ʙᴏᴛ ᴀɴᴅ ᴇɴᴊᴏʏ*
+┊ 【⑧】• *sᴇssɪᴏɴ_ɪᴅ* 
+┊ 【⑨】• *ᴅᴏɴ'ᴛ sʜᴀʀᴇ sᴇssɪᴏɴ_ɪᴅ*
+┊ 【⑩】• *_ᴋᴇᴇᴘ ɪᴛ ᴘʀɪᴠᴀᴛᴇ & sᴀғᴇ._*
 ┊      ┗─────────⊷
 ╰┬━━━━━━━━━━━━⊷⳹
 ┌┤ *(https://github.com/NjabuloJ/Njabulo-Jb)*
@@ -139,10 +139,10 @@ router.get('/', async (req, res) => {
                     },
                    forwardingScore: 999,
                     externalAdReply: {
-                      title: "Njabulo Jb GitHub",
-                       body: "Official Repository",
-                      thumbnailUrl: "https://files.catbox.moe/x0izlm.jpg",
-                       sourceUrl: "https://files.catbox.moe/x0izlm.jpg",
+                      title: "╭••➤®Njabulo Jb",
+                       body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴘᴀɪʀ ᴄᴏᴅᴇ ғᴏʀ ᴡʜᴀᴛsᴀᴘᴘ ʟɪɴᴋᴇᴅ ᴅᴇᴠɪᴄᴇ ᴡᴏʀᴋ ᴏɴ ᴏʟʟ ᴅᴇᴘʟᴏʏɪɴɢ ᴍᴇɴᴛ",
+                      thumbnailUrl: "https://files.catbox.moe/ny55yv.jpg",
+                       sourceUrl: "https://files.catbox.moe/ny55yv.jpg",
                        mediaType: 1,
                        renderLargerThumbnail: true
                        }
