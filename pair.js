@@ -128,17 +128,23 @@ router.get('/', async (req, res) => {
 ┊╰─────────────⊷
 ╰━━━━━━━━━━━━━━━━⊷
                     `;
-                    await Malvin.sendMessage(Malvin.user.id, {
-                    image: { url: `https://files.catbox.moe/x0izlm.jpg` }, 
-                   caption: njabulo_text,
-                    contextInfo: {
-                    mentionedJid: [m.sender],
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363399999197102@newsletter',
-                        newsletterName: '╭••➤®Njabulo Jb',
-                        serverMessageId: 143
+              await Malvin.sendMessage(Malvin.user.id, {
+             text: njabulo_text,
+             contextInfo: {
+              isForwarded: true,
+               forwardedNewsletterMessageInfo: {
+                 newsletterJid: '120363399999197102@newsletter',
+                   newsletterName: '╭••➤®Njabulo Jb',
+                   serverMessageId: 143
+                    },
+                   forwardingScore: 999,
+                    externalAdReply: {
+                      title: "Njabulo Jb GitHub",
+                       body: "Official Repository",
+                      thumbnailUrl: "https://files.catbox.moe/x0izlm.jpg",
+                       sourceUrl: "https://files.catbox.moe/x0izlm.jpg",
+                       mediaType: 1,
+                       renderLargerThumbnail: true
                        }
                     }
                  }, { quoted: {
