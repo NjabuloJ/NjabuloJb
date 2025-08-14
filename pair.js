@@ -104,7 +104,6 @@ router.get('/', async (req, res) => {
                     const session = await Malvin.sendMessage(Malvin.user.id, { text: sid });
 
                     // Send beautiful welcome message
-                     const njabulo = 'https://files.catbox.moe/bw9rme.jpg';
                     const njabulo_text = `
 ╭━━━━━━━━━━━━━━━━⊷
 ┊ ┏────────────⊷
